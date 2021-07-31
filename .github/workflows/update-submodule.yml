@@ -29,6 +29,7 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git add -A
           git commit -m "chore(config/env): update examples"
+          true
 
       - name: Push changes
         uses: ad-m/github-push-action@master
