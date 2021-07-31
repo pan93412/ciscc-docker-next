@@ -1,5 +1,11 @@
 # ciscc-docker-next
 
+## Cloning
+
+```bash
+git clone https://github.com/pan93412/ciscc-docker-next.git --recursive
+```
+
 ## Configuration
 
 All the configuration should set in `.*.env` file.
