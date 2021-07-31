@@ -35,7 +35,7 @@ jobs:
 
       - name: Start updating
         run: |
-          git submodule foreach git pull
+          git submodule foreach git pull origin master
 
       - name: Commit to master
         continue-on-error: true
