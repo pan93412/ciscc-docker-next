@@ -12,13 +12,10 @@ All the configuration should set in `.*.env` file.
 
 1. Copy `.*.env.example` to `.*.env` and modify it.
 
-2. Install the dependencies of `app` and build it.
+2. Build the requirement.
    ```bash
-   $ docker run --entrypoint "bash" --interactive --tty -v $(pwd)/app:/app node:14
-   # cd /app
-   # export NODE_ENV=production
-   # yarn && yarn build
-   # exit
+   $ . ./upgrade-ciscc.sh
+   $ full_upgrade_ciscc
    ```
 
 ## Running
