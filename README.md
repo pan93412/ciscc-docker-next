@@ -47,7 +47,9 @@ All the configuration should set in `.*.env` file.
 
     d. All done! Save it.
 
-4. Go to `COLLECTION TYPES` > `Users`, create your backend user.
+4. Modify the role "Public". Enable `count`, `find`, `findOne` for both the schema. Save it.
+
+5. Go to `COLLECTION TYPES` > `Users`, create your backend user.
 
     a. The username should be as same as the `STRAPI_ACCOUNT` in `.env` file you defined.
 
@@ -57,14 +59,14 @@ All the configuration should set in `.*.env` file.
 
     ![Go to `COLLECTION TYPES` > `Users`](/assets/images/strapi-create-user.png)
 
-5. Set up a web server to reverse proxy to these two services.
+6. Set up a web server to reverse proxy to these two services.
 
     | Service      | Default Port      |
     | ------------ | ----------------- |
     | backend      | 20100             |
     | strapi       | 20101             |
 
-6. Set up and deploy the [frontend](https://github.com/pan93412/ciscc-frontend-next) to Vercel. All done!
+7. Set up and deploy the [frontend](https://github.com/pan93412/ciscc-frontend-next) to Vercel. All done!
 
 ## Assocated Projects
 
