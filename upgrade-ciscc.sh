@@ -10,7 +10,7 @@ pull_images() {
 }
 
 regenerate_strapi() {
-    docker run --entrypoint "bash" -v "$(pwd)/app:/app" -c "cd /app && yarn && NODE_ENV=production yarn build"
+    docker run --entrypoint "bash" -v "$(pwd)/app:/app" node:14 -c "cd /app && yarn && NODE_ENV=production yarn build"
 }
 
 recreate_containers() {
