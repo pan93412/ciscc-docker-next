@@ -3,14 +3,8 @@ services:
   strapi:
     image: strapi/strapi
     command: yarn start
-    environment:
-      NODE_ENV: production
-      DATABASE_CLIENT: postgres
-      DATABASE_NAME: strapi
-      DATABASE_HOST: postgres
-      DATABASE_PORT: 5432
-      DATABASE_USERNAME: strapi
-      DATABASE_PASSWORD: strapi
+    env_file: 
+      - .strapi.env
     volumes:
       - ./app:/srv/app
     ports:
@@ -20,10 +14,8 @@ services:
 
   postgres:
     image: postgres
-    environment:
-      POSTGRES_DB: strapi
-      POSTGRES_USER: strapi
-      POSTGRES_PASSWORD: strapi
+    env_file: 
+      - .strapi.env
     volumes:
       - ./data:/var/lib/postgresql/data
 
@@ -31,10 +23,5 @@ services:
     image: pan93412/ciscc-backend:1.0
     ports:
       - 20100:3000
-    environment:
-      STRAPI_PATH: http://strapi:1337
-      STRAPI_ACCOUNT: strapi
-      STRAPI_PASSWORD: strapi
-      DISCORD_BOT_TOKEN: YOUR_BOT_TOKEN
-      # Your default channel ID
-      DISCORD_DEFAULT_CHANNEL: 123451234512345
+    env_file:
+      - .backend.env
