@@ -1,0 +1,40 @@
+version: '3'
+services:
+  strapi:
+    image: strapi/strapi
+    command: yarn start
+    environment:
+      NODE_ENV: production
+      DATABASE_CLIENT: postgres
+      DATABASE_NAME: strapi
+      DATABASE_HOST: postgres
+      DATABASE_PORT: 5432
+      DATABASE_USERNAME: strapi
+      DATABASE_PASSWORD: strapi
+    volumes:
+      - ./app:/srv/app
+    ports:
+      - 20101:1337
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_DB: strapi
+      POSTGRES_USER: strapi
+      POSTGRES_PASSWORD: strapi
+    volumes:
+      - ./data:/var/lib/postgresql/data
+
+  backend:
+    image: pan93412/ciscc-backend:1.0
+    ports:
+      - 20100:3000
+    environment:
+      STRAPI_PATH: http://strapi:1337
+      STRAPI_ACCOUNT: strapi
+      STRAPI_PASSWORD: strapi
+      DISCORD_BOT_TOKEN: YOUR_BOT_TOKEN
+      # Your default channel ID
+      DISCORD_DEFAULT_CHANNEL: 123451234512345

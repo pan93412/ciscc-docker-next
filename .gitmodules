@@ -1,0 +1,3 @@
+[submodule "app"]
+	path = app
+	url = https://github.com/pan93412/ciscc-strapi.git
