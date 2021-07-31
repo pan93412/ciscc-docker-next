@@ -50,6 +50,12 @@ Copy `.*.env.example` to `.*.env` and modify it.
 
 6. Set up and deploy the [frontend](https://github.com/pan93412/ciscc-frontend-next) to Vercel. All done!
 
+## Assocated Projects
+
+- [ciscc-strapi](https://github.com/pan93412/ciscc-strapi)
+- [ciscc-frontend-next](https://github.com/pan93412/ciscc-backend-next)
+- [ciscc-backend-next](https://github.com/pan93412/ciscc-backend-next)
+
 ## Authors
 
 (C) pan93412, 2021.
