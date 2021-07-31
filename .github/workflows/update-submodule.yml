@@ -19,9 +19,12 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+        with:
+          submodules: true
 
       - name: Start updating
-        run: git submodule foreach git pull
+        run: |
+          git submodule foreach git pull
 
       - name: Commit to master
         run: |
