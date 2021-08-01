@@ -11,7 +11,7 @@ services:
       - 20101:1337
     depends_on:
       - postgres
-    restart: alawys
+    restart: always
 
   postgres:
     image: postgres
@@ -19,7 +19,7 @@ services:
       - .postgres.env
     volumes:
       - ./data:/var/lib/postgresql/data
-    restart: alawys
+    restart: always
 
   backend:
     image: pan93412/ciscc-backend:1.0
@@ -27,4 +27,4 @@ services:
       - 20100:3000
     env_file:
       - .backend.env
-    restart: alawys
+    restart: always
