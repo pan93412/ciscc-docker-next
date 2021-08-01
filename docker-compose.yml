@@ -2,7 +2,7 @@ version: '3.7'
 services:
   strapi:
     image: strapi/strapi
-    command: yarn start
+    # command: yarn start
     env_file: 
       - .strapi.env
     volumes:
