@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 pull_repo() {
-    git pull
+    git pull --recurse-submodules
 }
 
 pull_images() {
