@@ -22,7 +22,7 @@ services:
     restart: always
 
   backend:
-    image: pan93412/ciscc-backend:1.0
+    image: pan93412/ciscc-backend:latest
     ports:
       - 20100:3000
     env_file:
