@@ -14,7 +14,7 @@ services:
     restart: always
 
   postgres:
-    image: postgres
+    image: postgres:13
     env_file: 
       - .postgres.env
     volumes:
